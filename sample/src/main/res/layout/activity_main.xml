@@ -24,7 +24,7 @@
                 android:text="Remove item"
                 android:id="@+id/remove_button"/>
 
-        <com.fourpool.growinglistview.GrowingListView
+        <com.fourpool.autoresizinglistview.AutoResizingListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/listView"

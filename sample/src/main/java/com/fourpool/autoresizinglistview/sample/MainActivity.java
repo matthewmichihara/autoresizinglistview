@@ -1,4 +1,4 @@
-package com.fourpool.growinglistview.sample;
+package com.fourpool.autoresizinglistview.sample;
 
 import android.app.Activity;
 import android.os.Bundle;

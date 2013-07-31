@@ -1,4 +1,4 @@
-package com.fourpool.growinglistview;
+package com.fourpool.autoresizinglistview;
 
 import android.content.Context;
 import android.database.DataSetObserver;
@@ -11,16 +11,16 @@ import android.widget.ListView;
 /**
  *
  */
-public class GrowingListView extends ListView {
-    public GrowingListView(Context context) {
+public class AutoResizingListView extends ListView {
+    public AutoResizingListView(Context context) {
         super(context);
     }
 
-    public GrowingListView(Context context, AttributeSet attrs) {
+    public AutoResizingListView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public GrowingListView(Context context, AttributeSet attrs, int defStyle) {
+    public AutoResizingListView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

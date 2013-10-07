@@ -17,3 +17,59 @@ android {
         targetSdkVersion 18
     }
 }
+
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+version = "0.0.1"
+group = "com.fourpool"
+
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+signing {
+    required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
+    sign configuration.archives
+}
+
+uploadArchives {
+    configuration = configuration.archives
+    repositories.mavenDeployer {
+        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+        repository(url: sonatypeRepo) {
+            authentication(userName: sonatypeUsername, password: sonatypePassword)
+        }
+
+        pom.project {
+            name 'Autoresizing ListView'
+            packaging 'aar'
+            description 'An Android ListView that can be placed inside a ScrollView'
+            url 'https://github.com/matthewmichihara/autoresizing-listview'
+
+            scm {
+                url 'scm:git@github.com:matthewmichihara/autoresizing-listview.git'
+                connection 'scm:git@github.com:matthewmichihara/autoresizing-listview.git'
+                developerConnection 'scm:git@github.com:matthewmichihara/autoresizing-listview.git'
+            }
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+
+            developers {
+                developer {
+                    id 'matthewmichihara'
+                    name 'Matthew Michihara'
+                    email 'matthew.michihara@gmail.com'
+                }
+            }
+        }
+    }
+}

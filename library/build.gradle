@@ -32,11 +32,12 @@ configurations {
 
 signing {
     required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
-    sign configuration.archives
+    sign configurations.archives
 }
 
 uploadArchives {
-    configuration = configuration.archives
+    configuration = configurations.archives
+
     repositories.mavenDeployer {
         beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
         repository(url: sonatypeRepo) {

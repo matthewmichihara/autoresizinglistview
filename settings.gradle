@@ -1,1 +1,1 @@
-include ':autoresizinglistview', ':sample'
+include ':autoresizinglistview', ':autoresizinglistview-sample'

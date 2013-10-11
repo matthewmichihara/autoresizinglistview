@@ -13,6 +13,8 @@ android {
     buildToolsVersion "18.0.0"
 
     defaultConfig {
+        versionCode 3
+        versionName "0.0.3"
         minSdkVersion 8
         targetSdkVersion 18
     }

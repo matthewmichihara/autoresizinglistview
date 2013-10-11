@@ -22,7 +22,7 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 version = "0.0.1"
-group = "com.fourpool"
+group = "com.fourpool.autoresizinglistview"
 
 configurations {
     archives {
@@ -48,12 +48,12 @@ uploadArchives {
             name 'Autoresizing ListView'
             packaging 'aar'
             description 'An Android ListView that can be placed inside a ScrollView'
-            url 'https://github.com/matthewmichihara/autoresizing-listview'
+            url 'https://github.com/matthewmichihara/autoresizinglistview'
 
             scm {
-                url 'scm:git@github.com:matthewmichihara/autoresizing-listview.git'
-                connection 'scm:git@github.com:matthewmichihara/autoresizing-listview.git'
-                developerConnection 'scm:git@github.com:matthewmichihara/autoresizing-listview.git'
+                url 'scm:git@github.com:matthewmichihara/autoresizinglistview.git'
+                connection 'scm:git@github.com:matthewmichihara/autoresizinglistview.git'
+                developerConnection 'scm:git@github.com:matthewmichihara/autoresizinglistview.git'
             }
 
             licenses {

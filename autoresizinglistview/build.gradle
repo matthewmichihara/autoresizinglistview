@@ -23,7 +23,7 @@ android {
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-version = "0.0.1"
+version = "0.0.3"
 group = "com.fourpool.autoresizinglistview"
 
 configurations {
